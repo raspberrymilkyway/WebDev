@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<!-- 
+    Name: Kylee W
+    Pawprint: kwcnr
+    Date: 12/11/21
+    Final
+-->
+
+<!--
+    References:
+        1. Bootstrap
+-->
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>You Win!</title>
+
+        <script src="Kwcnr-Final-F21.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <link rel='stylesheet' href="Kwcnr-Final-F21.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+
+    <body onload="logged()">
+        <ul class="navi">
+            <li class="navi"><a class="navi"  href="../Kwcnr-Projects-F21.html">Projects</a></li>
+            <li class="navi"><a class="navi" href="./Kwcnr-Final-Art-F21.html">Art</a></li>
+            <li class="navi"><a class="navi center" id="current" href="./index.html">FINAL PROJECT</a></li>
+            <li class="navi"><a class="navi right" id="login" href="./Kwcnr-Final-Login-F21.php">Login</a></li>
+            <li class="navi"><a class="navi right" id="logged" href="#" onclick="delCookie()">Logout</a></li>
+            <!-- <li class="navi"><a class="navi right" href="">Create Account</a></li> -->
+        </ul>
+        <div id="containerc" class="container-fluid justify-content-center">
+            <div id="holdContainerc" class="center">
+                <div id="imageContainerc" class="container-md justify-content-center">
+                    <img id="image" src="./Kwcnr-Final-Images/home.png" alt="Home">
+                </div>
+                <div id="textContainerc" class="container-md justify-content-center">
+                    <h2 id="text">(You open your eyes. Looks like you escaped the Empty this time.)</h2>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

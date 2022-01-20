@@ -1,0 +1,181 @@
+/* 
+    References:
+        1. https://www.w3schools.com/css/css3_gradients.asp
+        2. https://www.w3schools.com/howto/howto_css_topnavi_centered.asp
+        3. https://fdossena.com/?p=html5cool/buttons/i.frag
+*/
+
+body{
+     /*Reference 1, https://www.w3schools.com/css/css3_gradients.asp*/
+     background: linear-gradient(rgb(206, 206, 206) 70%,rgb(77, 77, 77));
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     /*End of reference 1*/
+
+     overflow-y: scroll;
+     overflow-x: scroll;
+}
+
+ul.navi {
+    list-style-type: none;
+    margin: 0;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    padding: 0;
+    background-color: rgb(59, 110, 87);
+
+    position: fixed;
+    float: left;
+    width: 100%;
+    z-index: 1;
+}
+li.navi{
+    display:inline;
+}
+a.navi{
+    float: left;
+    color: rgba(207, 207, 207, 0.842);
+    text-decoration: none;
+
+    font-family: 'Franklin Gothic Medium';
+    font-size: 35px;
+    padding-right: 15px;
+    padding-left: 10px;
+}
+li a:hover.navi{
+    background-color:rgb(73, 175, 141);
+    color: whitesmoke;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+li a.right{
+    float:right;
+    max-width: 30vw;
+}
+.center{
+    /* Reference 2, https://www.w3schools.com/howto/howto_css_topnavi_centered.asp */
+    float:none;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* End of reference 2 */
+}
+li a.navi#current{
+    color: whitesmoke;
+    text-decoration: underline;
+}
+li a.navi#logged{
+    display:none;
+}
+
+form{
+    text-align: center;
+    font-size: 30px;
+}
+form#login, form#madlibs{
+    padding-top: 15vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+div.containera, div.containerb{
+    padding-top:50%;
+}
+div#holdContainera, div#holdContainerb{
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+div#holdContainerc{
+    width: 100%;
+    text-align: center;
+}
+div#textContainera, div#imageContainera,div#textContainerb, div#imageContainerb, div#textContainerc, div#imageContainerc{
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    height: 30vh;
+    width: 45%;
+}
+div#textContainera, div#textContainerb, div#textContainerc{
+    margin-left: 8vw;
+}
+
+/* Reference 3, https://fdossena.com/?p=html5cool/buttons/i.frag */
+button#begin, button#eginbay{
+    padding:0.46em 1.6em;
+    border:0.1em solid #000000;
+    margin:0 0.2em 0.2em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#000000;
+    text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+    background-color:#FFFFFF;
+    text-align:center;
+    transition: all 0.15s;
+
+    font-size:12vw;
+    background-color:rgb(59, 110, 87);
+}
+button#begin:hover, button#eginbay:hover{
+    text-shadow: 0 0 2em rgba(255,255,255,1);
+    color: whitesmoke;
+    border-color:whitesmoke;
+
+    background-color:rgba(59, 110, 87, 0.616);
+}
+button#eginbay{
+    background-color:rgba(59, 110, 87, 0.616);
+    color: whitesmoke;
+    border-color: whitesmoke;
+}
+button#eginbay:hover{
+    background-color:rgb(59, 110, 87);
+    color:#000000;
+    border-color: black;
+}
+/* End of reference 3 */
+
+div#holdContainera a, div#holdContainerb a{
+    color: black;
+}
+div#holdContainera a:hover, div#holdContainerb a:hover{
+    text-decoration: underline;
+    color: black;
+}
+
+a.tutorial{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: rgba(245, 245, 245, 0.877);
+}
+a.tutorial:hover{
+    color: white;
+}
+
+
+/* for art html */
+div.row{
+    display: flex;
+    padding-top: 20vh;
+    z-index: -1;
+    text-align: center;
+}
+div.column{
+    flex: 33.33%;
+    padding: 5px;
+}
+div.column img{
+    width: 100%;
+}
+
+iframe{
+    padding-top: 50%;
+}

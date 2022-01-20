@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<!-- 
+    Name: Kylee W
+    Pawprint: kwcnr
+    Date: 12/11/21
+    Final
+-->
+
+<!--
+    References:
+        1. https://www.w3schools.com/html/html_forms.asp (generally)
+-->
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Final</title>
+
+        <script src="Kwcnr-Final-F21.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <link rel='stylesheet' href="Kwcnr-Final-F21.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        
+    </head>
+
+    <body onload="logged()">
+        <ul class="navi">
+            <li class="navi"><a class="navi"  href="../Kwcnr-Projects-F21.html">Projects</a></li>
+            <li class="navi"><a class="navi" href="./Kwcnr-Final-Art-F21.html">Art</a></li>
+            <li class="navi"><a class="navi center" id="current" href="./index.html">FINAL PROJECT</a></li>
+            <li class="navi"><a class="navi right" id="logged" href="./Kwcnr-Final-Login-F21.php">Login</a></li>
+            <li class="navi"><a class="navi right" id="login" href="./Kwcnr-Final-Login-F21.php">Login</a></li>
+            <li class="navi"><a class="navi right" id="logged" href="#" onclick="delCookie()">Logout</a></li>
+            <!-- <li class="navi"><a class="navi right" href="">Create Account</a></li> -->
+        </ul>
+        <div id="formContainer" class="d-flex justify-content-center">
+            <form id="madlibs" class="submit" action="Kwcnr-Interlude.php" method="GET">
+                <label for="b1">You were on the hunt for the </label>
+                <input type="text" name="b1" id="b1" placeholder="(lowercase)" required>
+                <label for="b1">.</label>
+                <label for="b2">Your path took you across the </label>
+                <input type="text" name="b2" id="b2" placeholder="(lowercase)" required>
+                <label for="b2">, </label>
+                <label for="b3">where you were taken back to the </label>
+                <input type="text" name="b3" id="b3" placeholder="(lowercase)" required>
+                <label for="b3">.</label>
+                <label>Beware - Ytpmeeht will not give up so soon.</label><br><br>
+                <input type="submit">
+            </form>
+        </div>
+        <a class="tutorial" href="./Kwcnr-Tutorial-F21.html" target="_blank">Stuck?</a>
+    </body>
+</html>

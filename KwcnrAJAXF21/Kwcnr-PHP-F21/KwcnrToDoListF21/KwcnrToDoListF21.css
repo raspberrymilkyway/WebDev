@@ -1,0 +1,73 @@
+/* 
+    References:
+        1. https://www.w3schools.com/css/css_align.asp
+*/
+
+
+table, th, tr, td{
+    border: 1px solid black;
+    border-top: 2px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+table thead tr{
+    background-color: black;
+    color: white;
+    font-size: 30px;
+}
+table tbody tr{
+    background-color: lightcyan;
+}
+h2{
+    text-align: center;
+}
+
+div#to-do{
+    overflow-y: scroll;
+    height: 550px;
+    width: 90%;
+    margin-left: 50px;
+    display: inline-block;
+    background-color: whitesmoke;
+}
+div#formContainer{
+    border: 2px groove lightslategrey;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: whitesmoke;
+    padding: 20px 50px;
+}
+
+body{
+    background-color:rgb(226, 207, 226);
+    /* background-color: slategrey; */
+}
+
+a{
+    color: darkblue;
+}
+
+p{
+    display: inline;
+}
+
+button{
+    background-color:ghostwhite;
+    border-radius: 20px;
+    margin-left: 800px;
+
+}
+div#formContainer button{
+    border-radius: 10px;
+    margin: auto;
+    margin-left: 200px;
+}
+
+/* Reference 1, https://www.w3schools.com/css/css_align.asp */
+.center {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+}
+/* End of reference 1 */

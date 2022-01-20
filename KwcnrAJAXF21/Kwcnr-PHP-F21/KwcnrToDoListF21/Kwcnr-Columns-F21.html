@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<!--
+	Name: Kylee W
+	Pawprint: kwcnr
+	Date: 9/11/2021
+	Challenge 3: Multi-Column Layout F21
+-->
+
+<!--
+    References:
+        1. Class notes (2830-Online-Lecture03 and 2830-Online-Lecture04)
+        2. https://www.w3schools.com/css/css_boxmodel.asp
+        3. https://css-tricks.com/almanac/properties/t/text-indent/
+        4. https://www.w3schools.com/css/css_navbar.asp
+        5. https://www.w3schools.com/css/css_navbar_horizontal.asp
+        6. https://www.w3schools.com/css/css_link.asp
+        7. https://www.w3schools.com/howto/howto_css_clearfix.asp
+        8. https://www.w3schools.com/css/css3_animations.asp
+        9. https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients
+
+        IF SOMETHING HAS NO SOURCE, IT IS MY OWN CODE. Apologies, but I'm tired of adding extra comments, so general disclaimer here.
+-->
+
+<html lang="en">
+    <head>
+		<meta charset="utf-8"/>
+        <title>Multi-Column Layout</title>
+        <style>
+            body{
+                background-color:grey;
+            }
+
+            /*Copied and edited from Portfolio*/
+            ul.navbar {
+                /* This section of code is based off reference 4 - https://www.w3schools.com/css/css_navbar.asp */
+                list-style-type: none;
+                margin: 0;
+                left: 0px;
+                right: 0px;
+                top: 0px;
+                padding: 0;
+                background-color: rgb(0, 189, 189);
+                /* End of reference 4 */
+
+                position: fixed;
+                float: left;
+                width: 100%;
+            }
+            li.navbar{
+                /* This section is based on reference 5, https://www.w3schools.com/css/css_navbar_horizontal.asp */
+                display:inline;
+                /* End of reference 5 */
+                text-indent: 0;
+                padding-left: 5px;
+                padding-right: 10px;
+            }
+            a.navbar{
+                
+                /*Reference 6, https://www.w3schools.com/css/css_link.asp */
+                color: rgb(46, 46, 46);;
+                text-decoration: none;
+                /* End of reference 6 */
+
+                font-family: 'Franklin Gothic Medium';
+                font-size: 35px;
+            }
+
+            /*Reference 6, https://www.w3schools.com/css/css_link.asp */
+            li a:hover.navbar{
+                background-color:rgb(65, 0, 112);
+                color: whitesmoke;
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            /* End of reference 6 */
+            li a.navbar#current{
+                color: black;
+                text-decoration: underline;
+            }
+            li a:hover.navbar#current{
+                color: whitesmoke;
+            }
+            
+            /* End of copied and edited from Portfolio */
+
+            /*Reference 8, https://www.w3schools.com/css/css3_animations.asp */
+            @keyframes water {
+                0%{
+                    height: 598px;
+                }
+                20%{
+                    border-bottom-left-radius: 0px;
+                }
+                100%{
+                    height: 42px;
+                    border-bottom-left-radius: 0px;
+                }
+            }
+            /*End of reference 8*/
+
+            div.mainWrapper{
+                /*Format from reference 2, https://www.w3schools.com/css/css_boxmodel.asp*/
+                width: 1160px;
+                border: 10px solid aqua;
+                padding: 11px;
+                margin: auto;
+                /*End of reference 2*/
+                
+                background-color: rgb(255, 219, 225);
+                border-radius: 10px 50px;
+                margin-top: 60px; 
+                /*If left with just "margin: auto", will be covered by navbar.*/
+            }
+
+            div.water{
+                background-color: rgb(233, 233, 233);
+                margin: -33px -12px;
+                border-radius: 0px 40px;
+
+
+                /*Reference 8, https://www.w3schools.com/css/css3_animations.asp */
+                animation-name: water;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                animation-timing-function: ease-in-out;
+                /*End of reference 8*/
+            }
+            div.column{
+                /*You could say this was from reference 2 again, but I really just looked at the element specificiations...*/
+                padding: 20px;
+                margin: 23px;
+                height: 425px;
+                border: 9px dotted rgb(73, 175, 141);
+                /*End of stuff that might be confused with reference 2*/
+
+                border-radius: 30px;
+                float:left;
+                text-align:center;
+            }
+            div.inside{
+                background-color: lightgrey;
+            }
+            div#rowWrapper{
+                width: 432px;
+                margin: 23px;
+                
+                float:left;
+                text-align:center;
+            }
+            div#left{
+                width: 251px;
+            }
+            div#right{
+                width: 223px;
+            }
+            div#top{
+                /*You could say this was from reference 2 again, but I really just looked at the element specificiations...*/
+                width: 376px;
+                height: 211px;
+                padding: 22px;
+                border: 6px dotted rgb(73, 175, 141);
+                /*End of stuff that might be confused with reference 2*/
+
+                margin-bottom: 30px;
+                border-radius: 30px;
+            }
+            div#bottom{
+                /*You could say this was from reference 2 again, but I really just looked at the element specificiations...*/
+                width: 376px;
+                height: 130px;
+                padding: 22px;
+                border: 6px dotted rgb(73, 175, 141);
+                /*End of stuff that might be confused with reference 2*/
+
+                border-radius: 30px;
+            }
+
+
+            h1{
+                text-align: center;
+            }
+            h2{
+                font-size: 15px;
+                margin: 20px;
+                font-family: 'Franklin Gothic Medium';
+            }
+            h3{
+                margin-bottom: 10px;
+            }
+            ul{
+                margin-left: -10px;
+                margin-top: -7px;
+            }
+            li{
+                text-align:left;
+                
+                /*Reference 3, https://css-tricks.com/almanac/properties/t/text-indent/ */
+                text-indent: -20px;
+                padding-left: 20px;
+                /*End of reference 3*/
+            }
+            span{
+                margin-bottom: 10px;
+                border-bottom: 2px dashed black;
+                font-family: 'Times New Roman';
+            }
+
+            /*Reference 7, https://www.w3schools.com/howto/howto_css_clearfix.asp */
+            .clearfix::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+            /*End of reference 7*/
+        </style>
+    </head>
+    <body>
+        <!-- 
+            This is based on reference 4 - https://www.w3schools.com/css/css_navbar.asp 
+        -->
+        <ul class="navbar">
+            <li class="navbar"><a class = "navbar" href="./index.html">Kylee W</a></li>
+            <li class="navbar"><a class = "navbar" id = "current" href="./Kwcnr-Columns-F21.html">Skills</a></li>
+            <li class="navbar"><a class = "navbar" href="./Kwcnr-TablesCards-F21.html">Courses</a></li>
+            <li class="navbar"><a class = "navbar" href="./Kwcnr-Projects-F21.html">Projects</a></li>
+        </ul>
+        <!-- End of reference 4 -->
+
+
+        <!-- Main wrapper. This div should wrap all columns, row wrapper, and title header -->
+        <div class="mainWrapper clearfix">
+            <div class="water">
+                <h1>Skills</h1>
+
+                <!-- Left Column -->
+                <!-- Put left column physical width calculations here: 
+                    
+                    251px (width)
+                    +  40px (padding: 20 left, 20 right)
+                    +  46px (margin:  23 left, 23 right)
+                    +  18px (border:   9 left,  9 right)
+                    ====================================
+                    355px
+
+                -->
+                <div id="left" class="column inside">
+                    <h3>Honors and Awards</h3>
+                    <pre><span>   High School   </span></pre>
+                    <ul>
+                        <li>Graduated in top 5 of a class of 500</li>
+                        <li>Won 2nd place in a(n Adobe) graphic design competition</a></li>
+                        <li>Won 2nd place (alongside team) in the Most Awesome Northwest KC Programming Contest</li>
+                    </ul>
+
+                    <pre><span>   College   </span></pre>
+                    <ul>
+                        <li>Dean's List</li>
+                        <li>Recipient of Bright Flight</li>
+                        <li>Member of the Honors College</li>
+                        <li>1st place (alongside team) in Google Tech Challenge</li>
+                    </ul>
+                </div>
+                
+
+
+                <!-- Row Wrapper. This div will contain two rows -->
+                <!--Put middle column physical width calculations here:
+
+                    432px (width)
+                    +   0px (padding:  0 left,  0 right)
+                    +  46px (margin:  23 left, 23 right)
+                    +   0px (border:   0 left,  0 right)
+                    ====================================
+                    478px
+
+
+                -->
+                <div id="rowWrapper">
+                    <div id="top" class="inside">
+                        <h3>Education</h3>
+                        <ul>
+                            <li>Associate's Degree (University of Missouri-Columbia)</li>
+                            <li>Math Minor (University of Missouri-Columbia)</li>
+                        </ul>
+                        <h3>Certifications</h3>
+                        <ul>
+                            <li>Bite-Sized Godot Game Development (Aug. 2021)</li>
+                            <li>Build a First-Person Shooter with Godot (Aug. 2021)</li>
+                        </ul>
+                    </div>
+                    <div id="bottom" class="inside">
+                        <h3>Languages</h3>
+                        <ul>
+                            <li>Python</li>
+                            <li>Java</li>
+                            <li>C</li>
+                            <li>Ruby</li>
+                            <li>R</li>
+                        </ul>
+                    </div>
+                </div>
+                
+
+
+                <!-- Right Column -->
+                <!--Put right column physical width calculations here: 
+
+                    1160px (total width)
+                    -  355px (total left)
+                    -  478px (total row wrapper)
+                    -   40px (right padding: 20 left, 20 right)
+                    -   46px (right margin:  23 left, 23 right)
+                    -   18px (right border:   9 left,  9 right)
+                    ===========================================
+                    223px (right width)
+
+                -->
+                <div id="right" class="column inside">
+                    <h3>Courses</h3>
+                    <pre><span>   Computer Science   </span></pre>
+                    <ul>
+                        <li>Principles of Programming Languages</li>
+                        <li>Cryptography</li>
+                    </ul>
+
+                    <pre><span>   Physics   </span></pre>
+                    <ul>
+                        <li>Mechanics</li>
+                        <li>Electronics Lab</li>
+                        <li>Physics of Space Exploration</li>
+                        <li>Quantum Mechanics</li>
+                    </ul>
+
+                    <pre><span>   Math   </span></pre>
+                    <ul>
+                        <li>Calculus 3</li>
+                        <li>Differential Equations</li>
+                        <li>Intro to Math Statistics</li>
+                    </ul>
+
+                    <pre><span>   Anthropology   </span></pre>
+                    <ul>
+                        <li>Cultural Anthropology</li>
+                        <li>Intro to Folklore Genres</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <h2>Last updated by Kylee W with ID kwcnr at: 9/17/2021</h2>
+    </body>
+</html>

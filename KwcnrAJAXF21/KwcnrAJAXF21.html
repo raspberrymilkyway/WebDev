@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<!-- 
+    Name: Kylee W
+    Pawprint: kwcnr
+    Date: 11/13/21
+    Challenge 9: AJAX Fall 2021
+-->
+
+<!--
+    References:
+        1. Starter code - thank you!
+        2. https://fonts.google.com/
+        3. https://en.wikipedia.org/wiki/Curiosity_(rover)
+-->
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>AJAX</title>
+
+        <script src="KwcnrAJAXF21.js"></script>
+        <link rel='stylesheet' href="KwcnrAJAXF21.css">
+
+        <!-- Reference 2, https://fonts.google.com/ -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Genos&family=Orbitron:wght@800&display=swap" rel="stylesheet">
+        <!-- End of reference 2 -->
+    </head>
+
+    <body onload="getManifests()">
+        <h1>Mars Rovers</h1>
+        <div id="container-container">
+            
+            <div class="container" id="roverInfo">
+                <h3 id="roverHeader">Rover Information: Curiosity</h3>
+
+                <!-- Reference 3, https://en.wikipedia.org/wiki/Curiosity_(rover) -->
+                <p id="roverText"><b>Curiosity is a car-sized Mars rover designed to explore the Gale crater on Mars as part of NASA's Mars Science Laboratory mission. Curiosity was launched from Cape Canaveral on 26 November 2011 at 15:02 UTC and landed on Aeolis Palus inside Gale on Mars on 6 August 2012 at 05:17 UTC. The Bradbury Landing site was less than 2.4km (1.5mi) from the center of the rover's touchdown target after a 560 million km (350 million mi) journey. The rover's goals include an investigation of the Martian climate and geology; assessment of whether the selected field site inside Gale has ever offered favorable environmental conditions to microbial life, including investigation of the role of water; and planetary habitability studies in preparation for human exploration.</b></p>
+                <!-- End of reference 3 -->
+            </div>
+            
+            <div class="container" id="images">
+                <!-- <img id="displayImage" src="" alt="currentImage"> -->
+                <h2 id="loading">Loading</h2>
+
+                <div id="slideshow-container">
+
+                    <div class="mySlides" id="original">
+                      <div class="numbertext" id="ori">0 / 0</div>
+                      <img class="displayImage" src="" alt="currentImage">
+                    </div>
+                    
+                </div>
+                
+                <div id="dot-container">
+                    <span class="dot" id="oriDot" onclick="showSlides(1)"></span>
+                </div>
+                <p id="camName">Camera Name</p>
+            </div>
+            
+            <div class="container" id="inputData">
+                <form>
+                    <input type="number" id="sol" value="100" placeholder="sols" onchange="changeSol()">
+                    <label for="sol">Sols</label><br>
+                    <select id="cameraSelect">
+                        <option>Please select a camera...</option>
+                    </select><br>
+                    <select id="roverName" onchange="changeRover()">
+                        <option value="curiosity">Curiosity</option>
+                        <option value="opportunity">Opportunity</option>
+                        <option value="spirit">Spirit</option>
+                    </select>
+                </form>
+                <button onclick="submitInfo()">Submit</button>
+            </div>
+        </div>
+        <a href="./Kwcnr-PHP-F21/KwcnrToDoListF21/Kwcnr-Projects-F21.html">Return to Projects page</a>
+    </body>
+</html>

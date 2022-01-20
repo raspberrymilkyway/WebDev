@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<!--
+	Name: Kylee W
+	Pawprint: kwcnr
+	Date: 10/30/21
+	Challenge 8: PHP
+-->
+
+<!-- References:
+        1. https://www.w3schools.com/html/html_form_elements.asp
+        2. https://www.w3schools.com/tags/att_input_pattern.asp
+        3. https://www.w3schools.com/tags/att_input_maxlength.asp
+        4. Class video (thanks!)
+ -->
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>PHP Playground</title>
+
+        <script src="Kwcnr-PHP-F21.js"></script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel='stylesheet' href="Kwcnr-PHP-F21.css">
+    </head>
+
+    <body>
+        <div id="wrapper-wrapper" class="d-flex justify-content-center">
+            <div id="form-wrapper">
+                <h2>Kwcnr PHP Playground</h2>
+
+                <!-- Referenced 1 (https://www.w3schools.com/html/html_form_elements.asp) to make these vvvv -->
+                <form id="function-select">
+                    <select id="functions" onchange="functionSelect(this.value)">
+                        <option value="" disabled selected>Choose a function</option>
+                        <option value="name">Name</option>
+                        <option value="hamming">Hamming Number</option>
+                        <option value="simulation">Password Simulation</option>
+                        <option value="list">List Creator</option>
+                        <option value="cylinder">Cylinder Surface Area</option>
+                    </select>
+                </form>
+                <form id="name" class="submit" action="Kwcnr-PHP-Name-F21.php" target="_blank" method="GET">
+                    <label for="firstname">First name: </label>
+                    <input type="text" id="firstname" name="firstname" placeholder="First name" required><br>
+                    <label for="lastname">Last name: </label>
+                    <input type="text" id="lastname" name="lastname" placeholder="Last name" required><br>
+                    <input type="submit">
+                    <input type="reset">
+                </form>
+                <form id="hamming" class="submit" action="Kwcnr-PHP-Hamming-F21.php" target="_blank" method="GET">
+                    <label for="num">Check to see if an integer is a Hamming Number: </label><br>
+                    <input type="number" min=1 id="num" name="num" placeholder="Positive numbers only!" required><br><br>
+                    <input type="submit">
+                    <input type="reset">
+                </form>
+                <form id="simulation" class="submit" action="Kwcnr-PHP-Password-F21.php" target="_blank" method="POST">
+                    <label for="username">Username: </label>
+                    <input type="text" id="username" name="username" placeholder="Username" required><br>
+                    <label for="password">Password: </label>
+                    <input type="password" id="password" name="password" placeholder="Password" required><br>
+                    <input type="submit">
+                    <input type="reset">
+                </form>
+
+                <!-- Reference 3, https://www.w3schools.com/tags/att_input_maxlength.asp-->
+                <form id="list" class="submit" action="Kwcnr-PHP-List-F21.php" target="_blank" method="GET">
+                    <label for="character-a">Type a single character:</label>
+                    <input type="text" maxlength="1" id="character-a" name="character-a" placeholder="a" required><br>
+                    <label for="character-b">Type a single character:</label>
+                    <input type="text" maxlength="1" id="character-b" name="character-b" placeholder="b" required><br>
+                    <input type="submit">
+                    <input type="reset">
+                </form>
+                <!-- End of reference 3 -->
+
+                <form id="cylinder" class="submit" action="Kwcnr-PHP-Cylinder-F21.php" target="_blank" method="GET">
+                    <label for="height">Height: </label>
+                    <input type="number" min=0 id="height" name="height" step="0.01" placeholder="Height" required><br>
+                    <label for="radius">Radius: </label>
+                    <input type="number" min=0 id="radius" name="radius" step="0.01" placeholder="Radius" required><br>
+                    <input type="submit">
+                    <input type="reset">
+                </form>
+            </div>
+        </div>
+        <a href="./KwcnrToDoListF21/Kwcnr-Projects-F21.html">Back to Projects page</a>
+    </body>
+</html>

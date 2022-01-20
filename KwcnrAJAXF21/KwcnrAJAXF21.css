@@ -1,0 +1,129 @@
+/*
+    References:
+        1. https://www.w3schools.com/css/css3_gradients.asp
+        2. https://css-tricks.com/snippets/css/a-guide-to-flexbox/ (used throughout)
+        3. https://www.w3schools.com/howto/howto_js_slideshow.asp
+*/
+
+body{
+    /*Reference 1, https://www.w3schools.com/css/css3_gradients.asp*/
+    background: linear-gradient(#f9825a, #7c5545 85% 95%, #936454);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /*End of reference 1*/
+    overflow: auto;
+}
+
+/* Reference 2, https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+#container-container{
+    display: flex;
+    flex-direction: row;
+    width: 98%;
+    margin: auto;
+    align-items: center;
+    align-content: center;
+    border: 2px solid black;
+}
+
+.container {
+    display: flex;
+    width: 33%;
+    height: 82vh;
+    flex-flow: column wrap;
+    border: 2px solid rgba(0, 0, 0, 0.589);
+    background-color: rgba(99, 10, 10, 0.342);
+    font-family: Genos, sans-serif;
+}
+/* End of reference 2 */
+
+#inputData {
+    justify-content: center;
+    align-items:center;
+}
+#inputData form{
+    align-self: baseline;
+    margin-left: 10%;
+}
+#inputData form select { /* These all have to be separate for some reason?? Putting them in general "form" category does not work */
+    font-family:Genos, sans-serif;
+    font-size: 2vw;
+}
+#inputData form input {
+    font-family: Genos, sans-serif;
+    font-size: 2vw;
+}
+#inputData button{
+    margin-top: 20px;
+    font-family: Genos, sans-serif;
+    font-size: 2vw;
+}
+#inputData label{
+    font-size: 2vw;
+    color: whitesmoke;
+}
+
+#images {
+    justify-content: space-evenly;
+    background-color: rgba(99, 10, 10, 0.281);
+    box-sizing: border-box;
+}
+div#images p#camName {
+    color: whitesmoke;
+}
+#images img{
+    max-width: 100%;
+}
+/* Reference 3 */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+    background-color: #717171;
+}
+/* End of reference 3 */
+#dot-container{
+    text-align: center;
+}
+.mySlides{
+    display: none;
+}
+.mySlides#original {
+    display: block;
+}
+
+#roverInfo {
+    align-items: center;
+    max-width: 33%;
+    max-height: 82vh;
+}
+#roverInfo h3{
+    font-family: Orbitron, sans-serif;
+    font-size: 25px;
+    text-align: center;
+}
+#roverText {
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 1.4vw;
+    color: whitesmoke;
+}
+
+#displayImage {
+    max-width: 100%;
+    max-height: auto;
+}
+#camName{
+    font-size: 1.5vw;
+}
+
+h1{
+    text-align: center;
+    font-family: Orbitron, sans-serif;
+}

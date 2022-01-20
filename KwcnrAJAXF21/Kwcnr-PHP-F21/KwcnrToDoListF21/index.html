@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<!--
+    Name: Kylee W
+    Pawprint: kwcnr
+    Date: 9/3/2021
+    Challenge 2: Portfolio F21
+-->
+<!--
+    References:
+        1) "2830-Online-Lecture02" playlist from class
+        2) https://www.w3schools.com/css/css_navbar.asp
+        3) https://www.w3schools.com/css/css_navbar_horizontal.asp
+        4) https://www.w3schools.com/howto/howto_css_image_center.asp
+        5) https://developer.mozilla.org/en-US/docs/Web/CSS/border-width
+        6) https://www.w3schools.com/css/css_background.asp
+        7) https://www.htmlcsscolor.com/hex/2E8B57
+        8) https://stackoverflow.com/questions/11620698/how-to-trigger-a-file-download-when-clicking-an-html-button-or-javascript 
+        9) https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_link_target
+        10) https://stackoverflow.com/questions/6393827/can-i-nest-a-button-element-inside-an-a-using-html5
+        11) https://www.w3schools.com/css/css_link.asp
+-->
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Portfolio</title>
+
+        <style>
+            ul.navbar {
+                /*
+                    This section of code is based off reference 2 - https://www.w3schools.com/css/css_navbar.asp
+                */
+                list-style-type: none;
+                margin: 0;
+                left: 0px;
+                right: 0px;
+                top: 0px;
+                padding: 0;
+                background-color: indigo;
+                /* End of reference 2 */
+
+                /*Own code*/
+                position: fixed;
+                float: left;
+                width: 100%;
+                /*End of own code*/
+            }
+            li.navbar{
+                /* This section is based on reference 3, https://www.w3schools.com/css/css_navbar_horizontal.asp */
+                display:inline;
+                /* End of reference 3 */
+            }
+            a.navbar{
+                
+                /*Reference 11, https://www.w3schools.com/css/css_link.asp */
+                color: rgb(196, 194, 194);
+                text-decoration: none;
+                /* End of reference 11 */
+
+                font-family: 'Franklin Gothic Medium';
+                font-size: 35px;
+                padding-right: 10px;
+            }
+
+            /*
+                Reference 11, https://www.w3schools.com/css/css_link.asp 
+            */
+            li a:hover.navbar{
+                background-color:rgb(73, 175, 141);
+                color: whitesmoke;
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            /* End of reference 11 */
+            li a.navbar#current{
+                color: whitesmoke;
+                text-decoration: underline;
+            }
+
+            /* 
+                This section is based on reference 3 - https://www.w3schools.com/css/css_navbar_horizontal.asp
+            */
+            #KyleeW {
+                color: whitesmoke;
+                font-size: 28px;
+                margin: 8px;
+                font-family:'Trebuchet MS';
+
+                padding-top:5px;
+                padding-bottom:5px;
+            }
+            /* End of reference 3 */
+
+            #me {
+                /*Own code*/
+                max-width: 40%;
+                /*End of own code*/
+
+                /*Below lines used reference 4, https://www.w3schools.com/howto/howto_css_image_center.asp */
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                /* End of reference 4 */
+                
+                /*Own code*/
+                margin-top: 120px;
+                margin-bottom: 60px;
+                /*End of own code*/
+
+                /* Based on reference 5, https://developer.mozilla.org/en-US/docs/Web/CSS/border-width */
+                border-radius: 60px;
+                border-color:seagreen;
+                border-style:groove;
+                border-width: 20px;
+                /* End of reference 5 */
+            }
+
+            /*Own code*/
+            #KyleeWPicText {
+                margin: 25px 0 15px 0;
+                text-align:center;
+                font-size:25px;
+                font-family:cursive;
+                color: indigo;
+            }
+
+            p {
+                text-align: center;
+                font-size: 20px;
+                color:slategrey;
+                font-family:cursive;
+            }
+            /*End of own code*/
+            
+            /* 
+                From reference 6, https://www.w3schools.com/css/css_background.asp . Color from reference 7, https://www.htmlcsscolor.com/hex/2E8B57
+            */
+            body {
+                background-color: #d3e7dc;
+            }
+            /* End of reference 6 and 7*/
+
+            /* Based on navbar, but own code */
+            .buttonBar {
+                list-style-type: none;
+                text-align: center;
+                margin: 0;
+                padding-bottom: 15px;
+            }
+            /* End of own code */
+            
+
+            li.buttons {
+                /* Reference 3 */
+                display: inline;
+                /* End of reference 3 */
+
+                /* Referenced 10 */
+                border: 2px outset;
+                /*End of reference 10*/
+                
+                /* Own code */
+                background-color: lightgrey;
+                margin: 15px;
+                font-size:16px;
+                /* End of own code */
+            }
+            a.buttons {
+                /*Reference 11, https://www.w3schools.com/css/css_link.asp */
+                color: black;
+                text-decoration: none;
+                /* End of reference 11 */
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- 
+            This is also based on reference 2 - https://www.w3schools.com/css/css_navbar.asp 
+        -->
+        <ul class="navbar">
+            <li class="navbar"><a class = "navbar" id="current" href="./index.html">Kylee W</a></li>
+            <li class="navbar"><a class = "navbar" href="./Kwcnr-Columns-F21.html">Skills</a></li>
+            <li class="navbar"><a class = "navbar" href="./Kwcnr-TablesCards-F21.html">Courses</a></li>
+            <li class="navbar"><a class = "navbar" href="./Kwcnr-Projects-F21.html">Projects</a></li>
+        </ul>
+        <!-- End of reference 2 -->
+
+        <!--Own code-->
+        <img src="./non-html/Kwcnr-Portfolio-F21-Self.JPG" id="me" alt="Kylee W at Powell Gardens"/>
+
+        <h2 id="KyleeWPicText">Kylee W</h2>
+
+        <p>Physicist and Programmer from the University of Missouri-Columbia
+        </p>
+        <!--End of own code-->
+
+
+        <!-- 
+            "Button" lines use reference 8, https://stackoverflow.com/questions/11620698/how-to-trigger-a-file-download-when-clicking-an-html-button-or-javascript 
+            and reference 9, https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_link_target
+        -->
+        <ul class="buttonBar">
+            <li class="buttons"><a class="buttons" href="./non-html/Kwcnr-Portfolio-F21-FakeResume.pdf" target="_blank">Résumé</a></li>
+            <li class="buttons"><a class="buttons" href="https://github.com/raspberrymilkyway" target="_blank">Github</a></li>
+            <li class="buttons"><a class="buttons" href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
+        </ul>
+        <!-- End of reference 8 and 9 -->
+    </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<!--
+	Name: Kylee W
+	Pawprint: kwcnr
+	Date: 10/9/21
+	Challenge 6: To-Do List F21
+-->
+
+<!--
+    References:
+        1. https://www.w3schools.com/tags/tag_select.asp
+        2. https://www.w3schools.com/html/html_form_input_types.asp
+        3. The starter code video from Kyle Webb
+        4. https://www.w3schools.com/charsets/ref_utf_symbols.asp
+-->
+
+<html lang="en">
+    <head>
+		<meta charset="utf-8"/>
+        <title>To-Do List [Bucket List]</title>
+
+        
+        <script src="KwcnrToDoListF21.js"></script>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel='stylesheet' href="KwcnrToDoListF21.css">
+    </head>
+    <body onload="addEventListener()">
+        <div class="container" id="header">
+            <a href="./Kwcnr-Projects-F21.html">Back to Projects page</a>
+
+            <!-- Reference 4, https://www.w3schools.com/charsets/ref_utf_symbols.asp -->
+            <button id="theme" onclick="changeTheme()">Dark Mode</button>
+            <!-- End of reference 4 -->
+        </div>
+        <div class="container-lg" id="to-do">
+            <h2 class="text align-middle" onclick="changeTitle()" id="tableTitle">Bucket List</h2>
+            <table class="table align-middle">
+                <thead id="tableHead">
+                    <tr id="columns">
+                        <td id="action">Action</td>
+                        <td id="title">Title</td>
+                        <td id="type">Type</td>
+                        <td id="priority">Priority</td>
+                        <td id="date">Date</td>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+
+                </tbody>
+            </table>
+        </div>
+        <div id="formContainer">
+            <form id="addToList" class="center">
+                <input type="text" id="titleNew" name="titleNew" placeholder="Title">
+
+                <!-- Reference 1, https://www.w3schools.com/tags/tag_select.asp -->
+                <select id="typeNew" name="typeNew">
+                    <option value="def" disabled selected>Select a type</option>
+                    <option value="Difficult">Difficult</option>
+                    <option value="Family Activity">Family Activity</option>
+                    <option value="Simple">Simple</option>
+                    <option value="Time-Consuming">Time-Consuming</option>
+                    <option value="Travel">Travel</option>
+                </select>
+                <!-- End of reference 1 -->
+
+                <!-- Reference 2, https://www.w3schools.com/html/html_form_input_types.asp -->
+                <label for="rangeNew">Priority: </label>
+                <input type="range" id="rangeNew" min="0" max="6" oninput="updatePriority()">
+                <p>[Value: <span id="priorityValue">3</span>]</p>
+                <input type="date" id="dateNew" name="dateNew" min="2021-08-23"><br>
+                <button onclick="addRow()" type="submit">Add to List</button>
+                <button onclick="clearForms()" type="reset">Clear Forms</button>
+                <!-- End of reference 2 -->
+            </form>
+        </div>
+    </body>
+</html>
+
+<!--
+    TO DO
+        fix clear forms [value] - span won't go back to 3, for whatever reason
+        clear forms after adding value too
+-->

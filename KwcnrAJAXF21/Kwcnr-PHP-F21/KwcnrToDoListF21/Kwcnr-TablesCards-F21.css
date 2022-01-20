@@ -1,0 +1,235 @@
+/*
+    References: (CSS file only)
+        1. https://www.w3schools.com/css/css_navbar.asp
+        2. https://www.w3schools.com/css/css_navbar_horizontal.asp
+        3. https://www.w3schools.com/css/css_link.asp
+        4. Class notes (2830-Online-Lecture05, 2830-Online-Lecture06, and 2830-Online-Lecture07)
+        5. https://fonts.google.com/specimen/Bebas+Neue
+        6. https://www.w3schools.com/cssref/css3_pr_box-shadow.asp
+        7. https://imagecolorpicker.com/
+*/
+
+
+body{
+    background-color: grey;
+    
+    /* Reference 5, */
+    font-family: 'Bebas Neue', 'Franklin Gothic Medium', sans-serif;
+    /* End of reference 5 */
+}
+
+
+table{
+    margin-top: 50px;
+}
+table, th, tr, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+table thead tr{
+    background-color: black;
+    color: white;
+    font-size: 30px;
+}
+table thead tr#courseHistory{
+    font-size: 50px;
+}
+table thead tr td#mizzou{
+    font-size: 45px;
+}
+table thead tr#tableLabel{
+    background-color: rgb(34, 34, 34);
+}
+table thead tr#tableLabel td.department, table thead tr#tableLabel td.gained{
+    width: 13% !important;
+}
+table img{
+    height: 90px;
+    width: auto;
+}
+
+/* Reference 4 - class notes */
+table tbody tr:nth-child(even){
+    background-color: lightgrey;
+}
+table tbody tr:nth-child(odd){
+    background-color: whitesmoke;
+}
+/* End of reference 4 */
+
+table tbody td#cs, table tbody td#phys, table tbody td#math{
+    font-size: 25px;
+    flex: none;
+    color: whitesmoke;
+}
+table tbody td#cs a, table tbody td#phys a, table tbody td#math a{
+    font-size: 30px;
+    flex: none;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+table tbody td#cs{
+    background-color: rgb(0, 189, 189);
+}
+table tbody td#phys{
+    background-color: rgb(0, 148, 148);
+}
+table tbody td#math{
+    background-color: rgb(0, 105, 105);
+}
+
+table tbody td{
+    font-size: 20px;
+}
+
+table tbody td:hover.align-middle{
+    background-color: rgb(218, 187, 192);
+}
+table tbody td.align-middle.instructor a:hover{
+    color: darkblue;
+}
+
+
+div#cardWrapper{
+    display: block;
+    text-align: center;
+    width: 90%;
+}
+div#cardWrapper div.row{
+    margin-left: 8%;
+}
+div.card-block{
+    margin: 0 5px;
+    width: 20vw;
+    margin-bottom: 10px;
+    background-color: rgb(255, 219, 225);
+    padding: 0;
+    overflow: hidden;
+
+    /* Reference 6, https://www.w3schools.com/cssref/css3_pr_box-shadow.asp */
+    box-shadow: 5px 10px rgb(12, 12, 12);
+    /* End of reference 6 */
+}
+
+/* Card 1 */
+div.card-block#profile p#major{
+    font-size: 30px;
+}
+div.card-block#profile .card-img-overlay{
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+/* Card 2 */
+div.card-block#proj{
+    box-shadow: 5px 10px rgb(255, 219, 225);
+
+    /* Reference 7, https://imagecolorpicker.com/, helped me find the right background color */
+    background-color: rgb(12, 12, 12);
+    /* End of reference 7 */
+
+    color:rgb(255, 219, 225);
+}
+div.card-block#proj div.card-details{
+    margin-top: 30px;
+}
+div.card-block#proj h5.card-title{
+    font-size: 30px;
+}
+div.card-block#proj p.card-subtitle{
+    font-size: 25px;
+}
+div.card-block#proj p.card-text#ohSnap a{
+    text-decoration: none;
+    color:rgb(255, 219, 225);
+    font-size: 20px;
+}
+div.card-block#proj p.card-text#ohSnap a:hover{
+    text-decoration: underline;
+    background-color: grey;
+}
+
+/* Card 3 */
+div.card-block#lang ul li{
+    list-style-type: none;
+    margin-left: -50px;
+    font-size: 20px;
+}
+div.card-block#lang img.card-img#python{
+    height: 13em;
+    width: auto;
+}
+
+h3{
+    font-size: 15px;
+    font-family: "Franklin Gothic Medium";
+}
+
+
+
+/* Copied and edited from Columns and Portfolio */
+.nav {
+    z-index:2;
+}
+ul.nav {
+    /* This section of code is based off reference 1 - https://www.w3schools.com/css/css_navbar.asp */
+    list-style-type: none;
+    margin: 0;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    padding: 0;
+    background-color: rgb(255, 219, 225);
+    /* End of reference 1 */
+
+    position: fixed;
+    float: left;
+    width: 100%;
+}
+li.nav{
+    /* This section is based on reference 2, https://www.w3schools.com/css/css_navbar_horizontal.asp */
+    display:inline;
+    /* End of reference 2 */
+    text-indent: 0;
+    padding-left: 0;
+    padding-right: 20px;
+}
+a.nav{
+    
+    /*Reference 3, https://www.w3schools.com/css/css_link.asp */
+    color: rgb(61, 61, 61);
+    text-decoration: none;
+    /* End of reference 3 */
+
+    
+    margin-top: 0px !important;
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    font-size: 40px;
+}
+/*Reference 3, https://www.w3schools.com/css/css_link.asp */
+li a:hover.nav{
+    background-color: rgb(0, 189, 189);
+    color: black;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+/* End of reference 3 */
+li a.nav#current{
+    color: black;
+    text-decoration: underline;
+}
+
+/* End of content copied and modified from Columns and Portfolio */
+
+
+/*
+    original color list:
+        navbar: rgb(38, 107, 32)
+        table (internal cells): rgb(38, 107, 32)
+        table (cs): rgb(34, 97, 29)
+        table (ph): rgb(26, 73, 22)
+        table (ma): rgb(19, 51, 16)
+*/

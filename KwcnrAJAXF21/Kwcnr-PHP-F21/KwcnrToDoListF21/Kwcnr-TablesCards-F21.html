@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<!--
+	Name: Kylee W
+	Pawprint: kwcnr
+	Date: 9.17.2021
+	Challenge 4: Tables and Cards F21
+-->
+
+<!--
+    Check below <head> for references. <meta> needs to load first.
+-->
+
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" 
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+              crossorigin="anonymous">
+
+        <link rel="stylesheet" href="Kwcnr-TablesCards-F21.css">
+
+        <!-- Reference 4, https://fonts.google.com/specimen/Bebas+Neue -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <!-- End of reference 4 -->
+
+        <title>Tables and Cards</title>
+    </head>
+
+
+    
+    <!--
+        References:
+            1. Class notes (2830-Online-Lecture05, 2830-Online-Lecture06, and 2830-Online-Lecture07)
+            2. https://www.w3schools.com/css/css_navbar.asp 
+            3. https://getbootstrap.com/docs/4.0/content/tables/
+            4. https://fonts.google.com/specimen/Bebas+Neue
+            5. http://catalog.missouri.edu/courseofferings/cmp_sc/
+            6. http://catalog.missouri.edu/courseofferings/physcs/
+            7. http://catalog.missouri.edu/courseofferings/math/
+            8. https://getbootstrap.com/docs/5.0/components/card/
+            9. https://getbootstrap.com/docs/4.3/components/card/
+            10. https://getbootstrap.com/docs/5.1/layout/containers/#responsive-containers
+            11. https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/2048px-Python-logo-notext.svg.png
+    -->
+
+
+
+
+    
+    <body>
+        <!-- 
+            This is based on reference 2 - https://www.w3schools.com/css/css_navbar.asp 
+            Copied and edited from Columns
+        -->
+        <div class="container-fluid" id="nav">
+            <ul class="nav">
+                <li class="nav"><a class = "nav" href="./index.html">Kylee W</a></li>
+                <li class="nav"><a class = "nav" href="./Kwcnr-Columns-F21.html">Skills</a></li>
+                <li class="nav"><a class = "nav" id = "current" href="./Kwcnr-TablesCards-F21.html">Courses</a></li>
+                <li class="nav"><a class = "nav" href="./Kwcnr-Projects-F21.html">Projects</a></li>
+            </ul>
+        </div>
+        <!-- End of reference 2; copied and edited from Columns -->
+
+
+        <!-- Any time you see 'class="align-middle"', that's from reference 3. Sorry, but it's everywhere, and I don't want to give the wrong impression.-->
+
+        <!-- Reference 10, https://getbootstrap.com/docs/5.1/layout/containers/#responsive-containers -->
+        <div class="container-lg" id="table">
+        <!-- End of reference 10 -->
+            <table class="table align-middle">
+                <thead class="info">
+                    <tr id="courseHistory"><td class="align-middle" colspan="8">W Course History</td></tr>
+                    <tr id="logoName">
+                        <td class="align-middle" colspan="1"><img src="./non-html/Kwcnr-TablesCards-F21-LogoRight.png" alt="Mizzou logo facing right"/></td>
+                        <td class="align-middle" id="mizzou" colspan="6">University of Missouri-Columbia</td>
+                        <td class="align-middle" colspan="1"><img src="./non-html/Kwcnr-TablesCards-F21-LogoLeft.png" alt="Mizzou logo facing left"/></td>
+                    </tr>
+                    <tr id="tableLabel">
+                        <td class="department align-middle">Department</td>
+                        <td class="courseNo align-middle">Course #</td>
+                        <td class="courseName align-middle">Course Name</td>
+                        <td class="instructor align-middle">Instructor</td>
+                        <td class="courseDesc align-middle">Course Description</td>
+                        <td class="grade align-middle">Grade</td>
+                        <td class="credits align-middle">Credit Hours</td>
+                        <td class="gained align-middle">Knowledge Gained</td>
+                    </tr>
+                </thead>
+
+
+                <tbody>
+                    <tr>
+                        <td class="department align-middle" id="cs" rowspan="2"><a href="https://engineering.missouri.edu/academics/eecs/" target="_blank">Computer Science</a></td>
+                        <td class="courseNo align-middle">4050</td>
+                        <td class="courseName align-middle">Design and Analysis of Algorithms I</td>
+                        <td class="instructor align-middle"><a href="https://scholars.umsystem.edu/scholar/12717/YOUSSEF-SAAB" target="_blank">Youssef Saab</a></td>
+
+                        <!-- Reference 5, http://catalog.missouri.edu/courseofferings/cmp_sc/ -->
+                        <td class="courseDesc align-middle">This course reviews and extends earlier work with linked structures, sorting and searching algorithms, and recursion. Graph algorithms, string matching, combinatorial search, geometrical algorithms and related topics are also studied.</td>
+                        <!-- End of reference 5 -->
+
+                        <td class="grade align-middle">A</td>
+                        <td class="credits align-middle">3</td>
+                        <td class="gained align-middle">How to make trees, make sorting and searching algorithms, and do runtime analysis of algorithms</td>
+                    </tr>
+                    <tr>
+                        <td class="courseNo align-middle">4450</td>
+                        <td class="courseName align-middle">Principles of Programming Languages</td>
+                        <td class="instructor align-middle"><a href="https://engineering.missouri.edu/faculty/ekincan-ufuktepe/" target="_blank">Ekincan Ufuktepe</a></td>
+                        
+                        <!-- Reference 5, http://catalog.missouri.edu/courseofferings/cmp_sc/ -->
+                        <td class="courseDesc align-middle">An introduction to the structure, design and implementation of programming languages. Topics include syntax, semantics, data types, control structures, parameter passing, run-time structures, and functional and logic programming.</td>
+                        <!-- End of reference 5 -->
+
+                        <td class="grade align-middle">N/A</td>
+                        <td class="credits align-middle">3</td>
+                        <td class="gained align-middle">Understanding of Regular Expressions, Context-Free Grammars, parsers, interpreters</td>
+                    </tr>
+
+
+                    <tr>
+                        <td class="department align-middle" id="phys" rowspan="3"><a href="https://physics.missouri.edu/" target="_blank">Physics</a></td>
+                        <td class="courseNo align-middle">3200</td>
+                        <td class="courseName align-middle">Physics of Space Exploration</td>
+                        <td class="instructor align-middle"><a href="https://www.nasa.gov/sites/default/files/atoms/files/godwin_linda.pdf" target="_blank">Linda Godwin</a></td>
+
+                        <!-- Reference 6, http://catalog.missouri.edu/courseofferings/physcs/ -->
+                        <td class="courseDesc align-middle">The course provides an overview of the solar system, spaceflight history, a review of Newtonian physics and law of universal gravitation, the application of these laws to spacecraft launch, entry, and orbit, planetary trajectories, and other special topics.  Three focused case studies of actual space missions are addressed.</td>
+                        <!-- End of reference 6 -->
+
+                        <td class="grade align-middle">A</td>
+                        <td class="credits align-middle">3</td>
+                        <td class="gained align-middle">Understanding of how the solar system works and how one might achieve space travel; how to calculate various forces in the solar system and upon satellites and simplistic forms of space travel</td>
+                    </tr>
+                    <tr>
+                        <td class="courseNo align-middle">4140</td>
+                        <td class="courseName align-middle">Mechanics</td>
+                        <td class="instructor align-middle"><a href="https://physics.missouri.edu/people/mills" target="_blank">Maria Mills</a></td>
+                        
+                        <!-- Reference 6, http://catalog.missouri.edu/courseofferings/physcs/ -->
+                        <td class="courseDesc align-middle">Development of fundamental concepts, principles of mechanics using mathematical methods. Many problems used.</td>
+                        <!-- End of reference 6 -->
+
+                        <td class="grade align-middle">N/A</td>
+                        <td class="credits align-middle">3</td>
+                        <td class="gained align-middle">How to derive an equation for a given situation from an original equation (i.e. Newton's Second Law)</td>
+                    </tr>
+                    <tr>
+                        <td class="courseNo align-middle">4800</td>
+                        <td class="courseName align-middle">Introduction to Quantum Mechanics I</td>
+                        <td class="instructor align-middle"><a href="https://physics.missouri.edu/people/chen" target="_blank">Shi-Jie Chen</a></td>
+
+                        <!-- Reference 6, http://catalog.missouri.edu/courseofferings/physcs/ -->
+                        <td class="courseDesc align-middle">Foundations of wave mechanics; wave packets; Schrodinger equation and I-D problems; operators and eigenfunctions, spherically symmetric systems.</td>
+                        <!-- End of reference 6 -->
+                        
+                        <td class="grade align-middle">N/A</td>
+                        <td class="credits align-middle">3</td>
+                        <td class="gained align-middle">Understanding of infinite square wells and the basics of Schrödinger's Equation</td>
+                    </tr>
+
+
+                    <tr>
+                        <td class="department align-middle" id="math" rowspan="3"><a href="https://www.math.missouri.edu/" target="_blank">Math</a></td>
+                        <td class="courseNo align-middle">2300</td>
+                        <td class="courseName align-middle">Calculus III</td>
+                        <td class="instructor align-middle"><a href="https://www.math.missouri.edu/people/verbitsky" target="_blank">Igor Verbitsky</a></td>
+
+                        <!-- Reference 7, http://catalog.missouri.edu/courseofferings/math/ -->
+                        <td class="courseDesc align-middle">Vectors, solid analytic geometry, calculus of several variables.</td>
+                        <!-- End of reference 7 -->
+
+                        <td class="grade align-middle">A</td>
+                        <td class="credits align-middle">3</td>
+                        <td class="gained align-middle">How to solve double and triple integrals, dot products, and cross products</td>
+                    </tr>
+                    <tr>
+                        <td class="courseNo align-middle">2320</td>
+                        <td class="courseName align-middle">Discrete Math Structures</td>
+                        <td class="instructor align-middle"><a href="https://www.math.missouri.edu/people/zhang" target="_blank">Qi Zhang</a></td>
+
+                        <!-- Reference 7, http://catalog.missouri.edu/courseofferings/math/ -->
+                        <td class="courseDesc align-middle">Sets, functions, logic, relations, induction, recursion, counting techniques, graphs, trees, algorithms.</td>
+                        <!-- End of reference 7 -->
+
+                        <td class="grade align-middle">A</td>
+                        <td class="credits align-middle">3</td>
+                        <td class="gained align-middle">Understanding of sets and set operations, Boolean logic, and graph logic</td>
+                    </tr>
+                    <tr>
+                        <td class="courseNo align-middle">4100</td>
+                        <td class="courseName align-middle">Differential Equations</td>
+                        <td class="instructor align-middle"><a href="https://www.math.missouri.edu/people/qin" target="_blank">Zhenbo Qin</a></td>
+
+                        <!-- Reference 7, http://catalog.missouri.edu/courseofferings/math/ -->
+                        <td class="courseDesc align-middle">Traditional introductory course in ordinary differential equations. Includes 1st and 2nd order linear differential equations with numerous applications; Laplace transforms; power series solutions; numerical methods, linear systems.</td>
+                        <!-- End of reference 7 -->
+
+                        <td class="grade align-middle">A</td>
+                        <td class="credits align-middle">3</td>
+                        <td class="gained align-middle">How to calculate gradients, curls, Laplace transforms, and solve linear differential equations</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Reference 10, https://getbootstrap.com/docs/5.1/layout/containers/#responsive-containers -->
+        <div class="container-lg" id="cardWrapper">
+        <!-- End of reference 10 -->
+            <!-- Reference 8, https://getbootstrap.com/docs/5.0/components/card/ -->
+            <div class="row align-middle">
+            <!-- End of reference 8 -->
+                <div class="card-block col" id="profile">
+                    <!-- Reference 9, https://getbootstrap.com/docs/4.3/components/card/ -->
+                    <div class="card-body">
+                        <img src="./non-html/Kwcnr-TablesCards-F21-Card1Image.jpg" class="card-img" alt="Profile picture of Kylee W"/>
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">Kylee W</h5>
+                            <p class="card-text" id="major">Computer Science and Physics Major</p>
+                        </div>
+                    </div>
+                    <!-- End of reference 9 -->
+                </div>
+                <div class="card-block col" id="proj">
+                    <!-- Reference 9, https://getbootstrap.com/docs/4.3/components/card/ -->
+                    <div class="card-body">
+                        <img src="./non-html/Kwcnr-TablesCards-F21-Card2Image.png" class="card-img" alt="ASCII text of the words 'Oh, Snap!'"/>
+                        <div class="card-details">
+                            <h5 class="card-title">Oh, Snap!</h5>
+                            <p class="card-subtitle">A Project.</p>
+                            <p class="card-text" id="ohSnap"><br><br><a href="https://github.com/raspberrymilkyway/Portfolio/tree/master/Oh_Snap" target="_blank">(a text adventure game that immortalizes my high school as it was when i graduated, my friend group by their relative running speeds, and my mighty coding teacher.)</a></p>
+                        </div>
+                    </div>
+                    <!-- End of reference 9 -->
+                </div>
+                <div class="card-block col" id="lang">
+                    <div class="card-body">
+                        <ul>
+                            <li>Python</li>
+                            <li>Java</li>
+                            <li>Ruby</li>
+                            <li>C</li>
+                            <li>R</li>
+                        </ul>
+                        <!-- Reference 11 (image source), https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/2048px-Python-logo-notext.svg.png -->
+                        <img src="./non-html/Kwcnr-TablesCards-F21-Card3Image.png" class="card-img" id="python" alt="Picture of Python logo"/>
+                        <!-- End of reference 11 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h3>Last updated by Kylee W with ID kwcnr at: 9.17.2021</h3>
+    </body>
+</html>
+
+
+
+<!--
+    TO DO (not part of the challenge, just notes for a later date):
+        -figure out how to set up the cards better. they're picky
+        -img-overlay stuff doesn't work well when the image is small - lack of contrast. could fix perhaps by tinting or setting color palette for text to be better &shrug
+        -((remove mizzou logos))
+        -change everything over so that the css file is for all files
+        -ig change links so everything's in the same folder, not nested
+-->
